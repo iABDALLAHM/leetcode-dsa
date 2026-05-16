@@ -1,17 +1,15 @@
 1class Solution {
 2  void moveZeroes(List<int> nums) {
 3      int pointer1 = 0;
-4     int pointer2 = 0;
-5     int temp = 0;
-6
-7  while (pointer2 < nums.length) {
-8    if (nums[pointer2] != 0) {
-9       temp = nums[pointer1];
-10      nums[pointer1] = nums[pointer2];
-11      nums[pointer2] = temp;
-12      pointer1++;
-13    }
-14    pointer2++;
-15  }
-16  }
-17}
+4  for (int i = 0; i < nums.length; i++) {
+5    if (nums[i] != 0) {
+6      nums[pointer1] = nums[i];
+7      pointer1++;
+8    }
+9  }
+10
+11  for (int i = pointer1; i < nums.length; i++) {
+12    nums[i] = 0;
+13  }
+14  }
+15}
