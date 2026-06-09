@@ -2,7 +2,7 @@
 2  bool checkString(String s) {
 3      bool seenB = false;
 4  for (int i = 0; i < s.length; i++) {
-5    if (s[i] == "a") {
+5    if (s[i].toLowerCase() == "a") {
 6      if (seenB == true) {
 7        return false;
 8      }
