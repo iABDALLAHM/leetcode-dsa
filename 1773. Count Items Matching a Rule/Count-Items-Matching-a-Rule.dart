@@ -4,26 +4,21 @@
 4    int countMatch = 0;
 5
 6  for (int i = 0; i < items.length; i++) {
-7    for (int j = 0; j < items.length; j++) {
-8      if (ruleKey == rules[0]) {
-9        if (ruleValue == items[i][0]) {
-10          countMatch++;
-11          break;
-12        }
-13      } else if (ruleKey == rules[1]) {
-14        if (ruleValue == items[i][1]) {
-15          countMatch++;
-16          break;
-17        }
-18      } else if (ruleKey == rules[2]) {
-19        if (ruleValue == items[i][2]) {
-20          countMatch++;
-21          break;
-22        }
-23      }
-24    }
-25  }
-26
-27  return countMatch;
-28  }
-29}
+7    if (ruleKey == rules[0]) {
+8      if (ruleValue == items[i][0]) {
+9        countMatch++;
+10      }
+11    } else if (ruleKey == rules[1]) {
+12      if (ruleValue == items[i][1]) {
+13        countMatch++;
+14      }
+15    } else if (ruleKey == rules[2]) {
+16      if (ruleValue == items[i][2]) {
+17        countMatch++;
+18      }
+19    }
+20  }
+21
+22  return countMatch;
+23  }
+24}
