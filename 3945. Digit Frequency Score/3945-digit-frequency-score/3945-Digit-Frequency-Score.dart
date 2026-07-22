@@ -17,8 +17,7 @@ class Solution {
   print(mapOfN);
 
   mapOfN.forEach((key, value) {
-    int temp = int.parse(key) * value;
-    sumOfResult += temp;
+    sumOfResult += int.parse(key) * value;
   });
 
   return sumOfResult;
