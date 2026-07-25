@@ -9,15 +9,13 @@ class Solution {
 
   double average = total / nums.length;
 
-  Set<int> setNums = nums.toSet();
-
   int result = average.floor() + 1;
   if (result < 1) {
     result = 1;
   }
 
-  for (int i = 0; i < setNums.length; i++) {
-    if (!setNums.contains(result)) {
+  for (int i = 0; i < nums.length; i++) {
+    if (!nums.contains(result)) {
       result = result;
       break;
     }
