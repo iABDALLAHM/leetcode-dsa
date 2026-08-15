@@ -11,12 +11,12 @@ class Solution {
 
   bool result = true;
   if (listOfChars.length < 8) {
-    result = false;
+    return false; 
   }
 
   for (int i = 0; i < listOfChars.length; i++) {
     if (i > 0 && listOfChars[i] == listOfChars[i - 1]) {
-      result = false;
+    return false; 
       break;
     }
     if (listOfSpecialChars.contains(listOfChars[i])) {
@@ -37,7 +37,7 @@ class Solution {
       upperCaseLetterCounter < 1 ||
       digitCounter < 1 ||
       specialCharCounter < 1) {
-    result = false;
+    return false; 
   }
 
  return result;
