@@ -1,7 +1,7 @@
 class Solution {
   bool strongPasswordCheckerII(String password) {
-   String validSpecialChar = r"!@#$%^&*()-+";
 
+  String validSpecialChar = r"!@#$%^&*()-+";
   var listOfChars = password.split("");
   var listOfSpecialChars = validSpecialChar.split("");
   int lowerCaseLetterCounter = 0;
@@ -12,12 +12,11 @@ class Solution {
   bool result = true;
   if (listOfChars.length < 8) {
     result = false;
-    print("here4");
   }
+
   for (int i = 0; i < listOfChars.length; i++) {
     if (i > 0 && listOfChars[i] == listOfChars[i - 1]) {
       result = false;
-      print("here1");
       break;
     }
     if (listOfSpecialChars.contains(listOfChars[i])) {
@@ -26,12 +25,10 @@ class Solution {
     if (int.tryParse(listOfChars[i]) != null) {
       digitCounter++;
     }
-    if (RegExp(r'[a-zA-Z]').hasMatch(listOfChars[i]) &&
-        (listOfChars[i] == listOfChars[i].toUpperCase())) {
+    if (RegExp(r'[A-Z]').hasMatch(listOfChars[i])) {
       upperCaseLetterCounter++;
     }
-    if (RegExp(r'[a-zA-Z]').hasMatch(listOfChars[i]) &&
-        (listOfChars[i] == listOfChars[i].toLowerCase())) {
+    if (RegExp(r'[a-z]').hasMatch(listOfChars[i])) {
       lowerCaseLetterCounter++;
     }
   }
@@ -43,8 +40,8 @@ class Solution {
     result = false;
   }
 
-
-
  return result;
+
   }
 }
+
