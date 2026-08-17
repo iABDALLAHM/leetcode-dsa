@@ -10,3 +10,6 @@ class Solution {
   return counter;
   }
 }
+
+this
+//2678. Number of Senior Citizens
