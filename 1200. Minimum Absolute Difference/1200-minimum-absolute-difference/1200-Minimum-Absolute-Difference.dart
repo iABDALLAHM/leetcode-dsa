@@ -1,8 +1,8 @@
 class Solution {
   List<List<int>> minimumAbsDifference(List<int> arr) {
-    
+
    arr.sort();
-  print(arr);
+   print(arr);
 
   int pointer1 = 0;
   int pointer2 = 1;
@@ -18,24 +18,13 @@ class Solution {
   print(minAbsDiff);
 
   List<List<int>> result = [];
-  int a = 0;
-  int b = 0;
+
   for (int i = 0; i < arr.length - 1; i++) {
-    bool isMin = false;
-    for (int j = i + 1; j < arr.length; j++) {
-      if (minAbsDiff == ((arr[i]) - (arr[j])).abs()) {
-        isMin = true;
-        a = (arr[i]);
-        b = (arr[j]);
-        minAbsDiff = ((arr[i]) - (arr[j])).abs();
-      } else {
-        break;
-      }
-    }
-    if (isMin) {
-      result.add([a, b]);
+    if (minAbsDiff == ((arr[i]) - (arr[i + 1])).abs()) {
+      result.add([arr[i], arr[i + 1]]);
     }
   }
+
   return result;
 
   }
