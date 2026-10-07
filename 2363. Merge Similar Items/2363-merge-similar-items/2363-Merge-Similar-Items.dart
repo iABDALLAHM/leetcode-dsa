@@ -12,7 +12,9 @@ class Solution {
       mapOfValueAndWeight[value] = weight;
     }
   }
+
   print(mapOfValueAndWeight);
+
   for (int i = 0; i < items2.length; i++) {
     List<int> currentList = items2[i];
     int value = currentList[0];
@@ -24,11 +26,12 @@ class Solution {
     }
   }
 
-  List<int> sortedValues = mapOfValueAndWeight.keys.toList()..sort();
+  List<int> sortedKeys = mapOfValueAndWeight.keys.toList()..sort();
+
   List<List<int>> result = [];
 
-  for (var value in sortedValues) {
-    result.add([value, mapOfValueAndWeight[value]!]);
+  for (var key in sortedKeys) {
+    result.add([key, mapOfValueAndWeight[key]!]);
   }
 
   return result;
