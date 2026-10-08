@@ -20,21 +20,21 @@ class Solution {
 
   List<int> result = [];
 
-  int evenElementsLength = 0;
-  int oddElementsLength = 0;
+  int evenElePointer = 0;
+  int oddElePointer = 0;
 
-  while (evenElementsLength <= evenEle.length - 1 ||
-      oddElementsLength <= oddEle.length - 1) {
-    if (evenElementsLength <= evenEle.length - 1) {
-      result.add(evenEle[evenElementsLength]);
+  while (evenElePointer <= evenEle.length - 1 ||
+      oddElePointer <= oddEle.length - 1) {
+    if (evenElePointer <= evenEle.length - 1) {
+      result.add(evenEle[evenElePointer]);
     }
 
-    if (oddElementsLength <= oddEle.length - 1) {
-      result.add(oddEle[oddElementsLength]);
+    if (oddElePointer <= oddEle.length - 1) {
+      result.add(oddEle[oddElePointer]);
     }
 
-    evenElementsLength++;
-    oddElementsLength++;
+    evenElePointer++;
+    oddElePointer++;
   }
 
 
